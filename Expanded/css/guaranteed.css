@@ -1,38 +1,112 @@
+@keyframes hero {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(800px);
+  }
+}
 
+@keyframes guarantee-container {
+  0% { opacity: 0; }
+  10% { opacity: 0; }
+  20% { opacity: 1; }
+  90% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(800px);
+  }
+}
+
+@keyframes checkmark {
+  0% { transform: scale(0)  translate(1px, -3px); }
+  5% { transform: scale(2)  translate(1px, -3px); }
+  100% { transform: scale(2)  translate(1px, -3px); }
+}
+
+@keyframes img-scroll {
+  0% { transform: translateX(-50px); }
+  5% { transform: translateX(0px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes paragraph {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes guaranteed-performance {
+  0% {opacity: 0;}
+  25% { opacity: 1;}
+  100% { opacity: 1; }
+}
 
 .guaranteed-hero {
   position: relative;
   text-align: center;
   display: inline-block;
   height: 100%;
-  width: 50%;
+  width: 40%;
   vertical-align: top;
 }
 .guaranteed-hero > h1 {
+  opacity: 0;
+  animation: hero 10s;
   font-weight: bolder;
-  display: inline-block;
-  padding-right: 75px;
+  display: block;
   padding-top: 100px;
   padding-bottom: 100px;
   border-right: solid 1px black;
 }
 .guarantees-container {
+  animation: guarantee-container 10s;
   position: relative;
   text-align: left;
   display: inline-block;
   height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: -10px;
   width: 50%;
 }
 .guaranteed {
   display: block;
+  vertical-align: top;
 }
+.guarantee-icon {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  transform: translateY(50%);
+  margin: 0;
+  padding: none;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.guarantee-icon > img {
+  margin: 0;
+  transform: translateX(-50px);
+}
+
 .checkbox {
   border: solid 2px rgb(73, 87, 94);
   border-radius: 3px;
 }
 .fa-check {
   display: inline-block;
-  transform: scale(2) translate(1px, -3px);
+  color: rgb(48, 197, 244);
+  transform: scale(0);
+  animation-timing-function: cubic-bezier(.72,.05,.6,1);
+  animation: checkmark-1 1s;
 }
 .guaranteed > h2 {
   margin: 0;
@@ -41,8 +115,57 @@
   display: inline-block;
 }
 .guaranteed > p {
+  opacity: 0;
+  padding: none;
   margin: 10px;
-  margin-bottom: 40px;
-  margin-left: 50px;
+  margin-left: 90px;
+  margin-top: 20px;
   display: inline-block;
+}
+
+.guaranteed-viewability .fa-check {
+  animation: checkmark 10s;
+  animation-delay: 1.5s;
+}
+.guaranteed-viewability > .guarantee-icon > img {
+  animation: img-scroll 10s;
+  animation-delay: 1.5s;
+}
+
+.guaranteed-viewability > p {
+  animation: paragraph 10s;
+  animation-delay: 2.5s;
+}
+
+.guaranteed-safety .fa-check {
+  animation: checkmark 10s;
+  animation-delay: 3.5s;
+}
+.guaranteed-safety > .guarantee-icon > img {
+  animation: img-scroll 10s;
+  animation-delay: 3.5s;
+}
+.guaranteed-safety > p {
+  animation: paragraph 10s;
+  animation-delay: 4.5s;
+}
+
+.guaranteed-placement .fa-check {
+  animation: checkmark 10s;
+  animation-delay: 5.5s;
+}
+.guaranteed-placement > .guarantee-icon > img {
+  animation: img-scroll 10s;
+  animation-delay: 5.5s;
+}
+.guaranteed-placement > p {
+  animation: paragraph 10s;
+  animation-delay: 6.5s;
+}
+
+
+.leverage-netmining {
+  opacity: 0;
+  animation: guaranteed-performance 4s;
+  animation-delay: 7s;
 }

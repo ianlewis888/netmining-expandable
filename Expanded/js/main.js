@@ -10,17 +10,20 @@ var guarantees = [
   {
     element: guaranteedViewability,
     text: "Viewability",
-    subtext: "Up to 90% viewability"
+    subtext: "Up to 90% viewability",
+    image: "images/eye.svg"
   },
   {
     element: guaranteedSafety,
     text: "Safety",
-    subtext: "With leading ad verication partners"
+    subtext: "With leading ad verication partners",
+    image: "images/skull.svg"
   },
   {
     element: guaranteedPlacement,
     text: "Placement",
-    subtext: "Whitelists, PMP packages, and integrations with the leading SSPs"
+    subtext: "Whitelists, PMP packages, and integrations with the leading SSPs",
+    image: "images/placement.svg"
   }
 ];
 
@@ -31,12 +34,14 @@ $(guaranteedPlacement).addClass("guaranteed-placement");
 
 $.each(guarantees, function(i){
     $(guarantees[i].element).addClass("guaranteed")
-      .html('<span class="checkbox"><span class="fa fa-check"></span></span>'
+      .html('<div class="guarantee-icon">'
+        + '<img src="'+guarantees[i].image+'""></img></div>'
+        + '<span class="checkbox"><span class="fa fa-check"></span></span>'
         + '<h2>'+guarantees[i].text+'</h2><br><p>'+guarantees[i].subtext+'</p>');
     $(guaranteesContainer).append(guarantees[i].element);
 });
 
-animation_2();
+animation_1();
 
 function animation_1() {
 
