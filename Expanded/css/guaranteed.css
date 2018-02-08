@@ -1,3 +1,48 @@
+
+
+.guaranteed-hero {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+  vertical-align: top;
+}
+.guaranteed-hero > h1 {
+  font-weight: bolder;
+  display: inline-block;
+  padding-right: 75px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-right: solid 1px black;
+}
+.guarantees-container {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+}
 .guaranteed {
+  display: block;
+}
+.checkbox {
+  border: solid 2px rgb(73, 87, 94);
+  border-radius: 3px;
+}
+.fa-check {
+  display: inline-block;
+  transform: scale(2) translate(1px, -3px);
+}
+.guaranteed > h2 {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  display: inline-block;
+}
+.guaranteed > p {
+  margin: 10px;
+  margin-bottom: 40px;
+  margin-left: 50px;
   display: inline-block;
 }

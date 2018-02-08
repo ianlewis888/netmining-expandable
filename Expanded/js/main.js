@@ -1,24 +1,47 @@
 var animationContainer = document.getElementsByClassName("animation-container")[0];
 var textContainer = document.getElementsByClassName("text-container")[0];
-
 var guaranteedViewability = document.createElement("div");
 var guaranteedSafety = document.createElement("div");
 var guaranteedPlacement = document.createElement("div");
+var guaranteesContainer = document.createElement("div");
+var guaranteedHero = '<div class="guaranteed-hero"><h1>Guaranteed</h1></div>';
 
-var guarantees = [guaranteedViewability, guaranteedSafety, guaranteedPlacement];
+var guarantees = [
+  {
+    element: guaranteedViewability,
+    text: "Viewability",
+    subtext: "Up to 90% viewability"
+  },
+  {
+    element: guaranteedSafety,
+    text: "Safety",
+    subtext: "With leading ad verication partners"
+  },
+  {
+    element: guaranteedPlacement,
+    text: "Placement",
+    subtext: "Whitelists, PMP packages, and integrations with the leading SSPs"
+  }
+];
 
-$(guaranteedViewability).addClass("guaranteed-viewability")
+$(guaranteesContainer).addClass("guarantees-container");
+$(guaranteedViewability).addClass("guaranteed-viewability");
 $(guaranteedSafety).addClass("guaranteed-safety");
 $(guaranteedPlacement).addClass("guaranteed-placement");
 
 $.each(guarantees, function(i){
-    $(guarantees[i]).addClass("guaranteed")
-    .html('<span class="fa fa-square"></span><span class="fa fa-check"></span>');
+    $(guarantees[i].element).addClass("guaranteed")
+      .html('<span class="checkbox"><span class="fa fa-check"></span></span>'
+        + '<h2>'+guarantees[i].text+'</h2><br><p>'+guarantees[i].subtext+'</p>');
+    $(guaranteesContainer).append(guarantees[i].element);
 });
 
 animation_2();
 
 function animation_1() {
+
+  $(animationContainer).addClass("eyes");
+
   for (var i=0;i<45;i++) {
     var img = document.createElement('img');
     img.src = "images/eye.svg";
@@ -31,18 +54,20 @@ function animation_1() {
   $(textContainer).html('<h1 class="real-eyes">Get real eyes to view your ads for&nbsp;<span>real results.</span></h1>');
 
   setTimeout(function() {
+
     $(".eye").each(function(){ this.remove(); });
+    $(textContainer).html("");
     $(animationContainer).removeClass("eyes");
-    animation2();
+    animation_2();
+
   }, 6000);
 }
-$(animationContainer).removeClass("eyes");
+
 function animation_2() {
   $(animationContainer)
-    .addClass("guaranteed")
-    .append(guaranteedViewability)
-    .append(guaranteedSafety)
-    .append(guaranteedPlacement);
+    .addClass("guaranteed-animation")
+    .append(guaranteedHero)
+    .append(guaranteesContainer);
 
-  $(textContainer).html('<h1 class="leverage-netmining">Leverage Netmining for&nbsp;<span>guaranteed performance.</span></h1>');
+  $(textContainer).html('<h1 class="leverage-netmining">Guaranteed&nbsp;<span>performance.</span></h1>');
 }
