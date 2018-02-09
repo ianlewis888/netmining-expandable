@@ -6,8 +6,7 @@ var guaranteedPlacement = document.createElement("div");
 var guaranteesContainer = document.createElement("div");
 var guaranteedHero = '<div class="guaranteed-hero"><h1>Guaranteed</h1></div>';
 
-var guarantees = [
-  {
+var guarantees = [{
     element: guaranteedViewability,
     text: "Viewability",
     subtext: "Up to 90% viewability",
@@ -32,26 +31,28 @@ $(guaranteedViewability).addClass("guaranteed-viewability");
 $(guaranteedSafety).addClass("guaranteed-safety");
 $(guaranteedPlacement).addClass("guaranteed-placement");
 
-$.each(guarantees, function(i){
-    $(guarantees[i].element).addClass("guaranteed")
-      .html('<div class="guarantee-icon">'
-        + '<img src="'+guarantees[i].image+'""></img></div>'
-        + '<span class="checkbox"><span class="fa fa-check"></span></span>'
-        + '<h2>'+guarantees[i].text+'</h2><br><p>'+guarantees[i].subtext+'</p>');
-    $(guaranteesContainer).append(guarantees[i].element);
+$.each(guarantees, function(i) {
+  $(guarantees[i].element).addClass("guaranteed")
+    .html('<div class="guarantee-icon">' +
+      '<img src="' + guarantees[i].image + '""></img></div>' +
+      '<span class="checkbox"><span class="fa fa-check"></span></span>' +
+      '<h2>' + guarantees[i].text + '</h2><br><p>' + guarantees[i].subtext + '</p>');
+  $(guaranteesContainer).append(guarantees[i].element);
 });
-
-animation_1();
 
 function animation_1() {
 
   $(animationContainer).addClass("eyes");
 
-  for (var i=0;i<45;i++) {
+  for (var i = 0; i < 45; i++) {
     var img = document.createElement('img');
     img.src = "images/eye.svg";
-    if (i < 9) { img.style.marginTop = "20px"; }
-    if (i===22) { img.classList.add("eye-main"); }
+    if (i < 9) {
+      img.style.marginTop = "20px";
+    }
+    if (i === 22) {
+      img.classList.add("eye-main");
+    }
     img.classList.add("eye");
     animationContainer.appendChild(img);
   }
@@ -60,7 +61,9 @@ function animation_1() {
 
   setTimeout(function() {
 
-    $(".eye").each(function(){ this.remove(); });
+    $(".eye").each(function() {
+      this.remove();
+    });
     $(textContainer).html("");
     $(animationContainer).removeClass("eyes");
     animation_2();
@@ -75,4 +78,8 @@ function animation_2() {
     .append(guaranteesContainer);
 
   $(textContainer).html('<h1 class="leverage-netmining">Guaranteed&nbsp;<span>performance.</span></h1>');
+
+  setTimeout(function() {
+    $(animationContainer).html("");
+  }, 10000);
 }

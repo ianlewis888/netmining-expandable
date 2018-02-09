@@ -1,19 +1,71 @@
-@keyframes eye-animation-main {
+@-webkit-keyframes eye-animation-main {
   0% {
-    transform: scale(5);
+    -webkit-transform: scale(5);
+            transform: scale(5);
     opacity: 0;
   }
   20% {
-    transform: scale(5);
+    -webkit-transform: scale(5);
+            transform: scale(5);
     opacity: 0;
   }
   40% {
-    transform: scale(5);
+    -webkit-transform: scale(5);
+            transform: scale(5);
     opacity: 1;
   }
   60% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     width: 70px;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes eye-animation-main {
+  0% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 0;
+  }
+  20% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: scale(5);
+            transform: scale(5);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    width: 70px;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes eye-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
     opacity: 1;
   }
   90% {
@@ -42,11 +94,44 @@
   }
 }
 
+@-webkit-keyframes real-eyes-1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes real-eyes-1 {
   0% {
     opacity: 0;
   }
   20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes real-eyes-2 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
     opacity: 1;
   }
   90% {
@@ -109,7 +194,8 @@
 }
 
 .eyes>img {
-  animation: eye-animation 6s;
+  -webkit-animation: eye-animation 6s;
+          animation: eye-animation 6s;
   opacity: 0;
   width: 70px;
   margin: 5px;
@@ -117,14 +203,17 @@
 
 .eyes>img.eye-main {
   opacity: 0;
-  animation: eye-animation-main 6s;
+  -webkit-animation: eye-animation-main 6s;
+          animation: eye-animation-main 6s;
 }
 
 .real-eyes {
-  animation: real-eyes-1 6s;
+  -webkit-animation: real-eyes-1 6s;
+          animation: real-eyes-1 6s;
   opacity: 0;
 }
 
 .real-eyes>span {
-  animation: real-eyes-2 6s;
+  -webkit-animation: real-eyes-2 6s;
+          animation: real-eyes-2 6s;
 }
