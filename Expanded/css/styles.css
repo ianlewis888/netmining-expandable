@@ -6,21 +6,26 @@
   background-color: #ffffff;
   font-family: "Open Sans", sans-serif;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   color: rgb(0, 84, 123);
   overflow: hidden;
+  -webkit-transition: background-color 500ms ease;
+  transition: background-color 500ms ease;
 }
+
 .ad img {
   -webkit-backface-visibility: hidden;
 }
+
 .nm-logo {
   position: absolute;
   width: 250px;
   top: 20px;
   left: 20px;
 }
+
 .animation-container {
   position: absolute;
   top: 105px;
@@ -30,6 +35,8 @@
 }
 
 .text-container {
+  -webkit-transition: color 500ms ease;
+  transition: color 500ms ease;
   text-align: center;
   position: absolute;
   top: 450px;
@@ -38,12 +45,12 @@
   z-index: 50;
 }
 
-.text-container > h1 {
+.text-container>h1 {
   display: inline-block;
   margin: 0;
   color: rgb(73, 87, 94);
 }
 
-.text-container > h1 > span {
+.text-container>h1>span {
   color: rgb(40, 120, 165);
 }

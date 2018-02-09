@@ -1,0 +1,75 @@
+@-webkit-keyframes fadein {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.final-background {
+  background-color: rgb(0, 84, 123);
+}
+
+.logo-white {
+  margin: 0;
+  padding: 0;
+  left: 140px;
+  position: absolute;
+  width: 500px;
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+}
+
+.btn {
+  -webkit-animation: fadein 1s;
+  animation: fadein 1s;
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 20px;
+  margin-top: 200px;
+  border-radius: 3px;
+  width: 200px;
+  cursor: pointer;
+  background-color: rgb(48, 197, 244);
+  color: #ffffff;
+}
+
+.btn>span {
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.btn:hover>span {
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
+
+.leverage-final>h1 {
+  color: #ffffff;
+}
+
+.leverage-final>h1>span {
+  color: rgb(48, 197, 244);
+}

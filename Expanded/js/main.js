@@ -2,12 +2,25 @@
 // Initialize Element Variables
 // **
 
+var adFrame = document.getElementsByClassName("ad")[0];
+var logo = document.getElementsByClassName("nm-logo")[0];
 var animationContainer = document.getElementsByClassName("animation-container")[0];
 var textContainer = document.getElementsByClassName("text-container")[0];
 var guaranteedViewability = document.createElement("div");
 var guaranteedSafety = document.createElement("div");
 var guaranteedPlacement = document.createElement("div");
 var guaranteesContainer = document.createElement("div");
+var letsTalk = document.createElement("div");
+var logo_final = document.createElement("img");
+
+// **
+// Add Styles and Content
+// **
+
+$(guaranteesContainer).addClass("guarantees-container");
+$(guaranteedViewability).addClass("guaranteed-viewability");
+$(guaranteedSafety).addClass("guaranteed-safety");
+$(guaranteedPlacement).addClass("guaranteed-placement");
 var guaranteedHero = '<div class="guaranteed-hero"><h1>Guaranteed</h1></div>';
 var guarantees = [{
     element: guaranteedViewability,
@@ -28,15 +41,6 @@ var guarantees = [{
     image: "images/placement.svg"
   }
 ];
-
-// **
-// Add Styles and Content
-// **
-
-$(guaranteesContainer).addClass("guarantees-container");
-$(guaranteedViewability).addClass("guaranteed-viewability");
-$(guaranteedSafety).addClass("guaranteed-safety");
-$(guaranteedPlacement).addClass("guaranteed-placement");
 $.each(guarantees, function(i) {
   $(guarantees[i].element).addClass("guaranteed")
     .html('<div class="guarantee-icon">' +
@@ -45,6 +49,15 @@ $.each(guarantees, function(i) {
       '<h2>' + guarantees[i].text + '</h2><br><p>' + guarantees[i].subtext + '</p>');
   $(guaranteesContainer).append(guarantees[i].element);
 });
+$(letsTalk).addClass("btn");
+$(letsTalk).html('Let\'s Talk&nbsp;<span class="fa fa-chevron-right"></span>');
+$(letsTalk).on("click", function() {
+  var destinationLink = window.open("http://netmining.com/lets-talk/");
+  destinationLink.opener = null;
+});
+logo_final.src = "images/nm-logo-white.svg";
+$(logo_final).addClass("logo-white");
+
 
 // **
 // Create Animation Functions
@@ -71,9 +84,7 @@ function animation_1() {
 
   setTimeout(function() {
 
-    $(".eye").each(function() {
-      $(this).remove();
-    });
+    $(animationContainer).html("");
     $(textContainer).html("");
     $(animationContainer).removeClass("eyes");
     animation_2();
@@ -91,5 +102,17 @@ function animation_2() {
 
   setTimeout(function() {
     $(animationContainer).html("");
+    $(animationContainer).removeClass("guaranteed-animation");
+    animation_3();
   }, 10000);
+}
+
+function animation_3() {
+  $(adFrame).addClass("final-background");
+  $(logo).addClass("logo-fadeout");
+  $(textContainer).addClass("leverage-final");
+  $(animationContainer)
+    .addClass("learn-more")
+    .append(logo_final)
+    .append(letsTalk);
 }
