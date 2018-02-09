@@ -12,6 +12,9 @@
   color: rgb(0, 84, 123);
   overflow: hidden;
 }
+.ad img {
+  -webkit-backface-visibility: hidden;
+}
 .nm-logo {
   position: absolute;
   width: 250px;

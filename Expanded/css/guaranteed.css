@@ -292,6 +292,7 @@
 
 .guarantee-icon>img {
   margin: 0;
+  -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   -webkit-transform: translateX(-50px);

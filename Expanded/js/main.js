@@ -1,3 +1,7 @@
+// **
+// Initialize Element Variables
+// **
+
 var animationContainer = document.getElementsByClassName("animation-container")[0];
 var textContainer = document.getElementsByClassName("text-container")[0];
 var guaranteedViewability = document.createElement("div");
@@ -5,7 +9,6 @@ var guaranteedSafety = document.createElement("div");
 var guaranteedPlacement = document.createElement("div");
 var guaranteesContainer = document.createElement("div");
 var guaranteedHero = '<div class="guaranteed-hero"><h1>Guaranteed</h1></div>';
-
 var guarantees = [{
     element: guaranteedViewability,
     text: "Viewability",
@@ -26,11 +29,14 @@ var guarantees = [{
   }
 ];
 
+// **
+// Add Styles and Content
+// **
+
 $(guaranteesContainer).addClass("guarantees-container");
 $(guaranteedViewability).addClass("guaranteed-viewability");
 $(guaranteedSafety).addClass("guaranteed-safety");
 $(guaranteedPlacement).addClass("guaranteed-placement");
-
 $.each(guarantees, function(i) {
   $(guarantees[i].element).addClass("guaranteed")
     .html('<div class="guarantee-icon">' +
@@ -39,6 +45,10 @@ $.each(guarantees, function(i) {
       '<h2>' + guarantees[i].text + '</h2><br><p>' + guarantees[i].subtext + '</p>');
   $(guaranteesContainer).append(guarantees[i].element);
 });
+
+// **
+// Create Animation Functions
+// **
 
 function animation_1() {
 
@@ -57,12 +67,12 @@ function animation_1() {
     animationContainer.appendChild(img);
   }
 
-  $(textContainer).html('<h1 class="real-eyes">Get real eyes to view your ads for&nbsp;<span>real results.</span></h1>');
+  $(textContainer).html('<h1 class="real-eyes">Get real eyes to view your ads for&nbsp;<span class="real-results">real results.</span></h1>');
 
   setTimeout(function() {
 
     $(".eye").each(function() {
-      this.remove();
+      $(this).remove();
     });
     $(textContainer).html("");
     $(animationContainer).removeClass("eyes");

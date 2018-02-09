@@ -213,7 +213,8 @@
   opacity: 0;
 }
 
-.real-eyes>span {
+.real-results {
   -webkit-animation: real-eyes-2 6s;
           animation: real-eyes-2 6s;
+  opacity: 0;
 }
