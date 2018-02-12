@@ -1,59 +1,73 @@
 @-webkit-keyframes eye-animation-main {
   0% {
-    -webkit-transform: scale(5);
-    transform: scale(5);
+    -webkit-transform: scale(1);
+    transform: scale(1);
     opacity: 0;
   }
   20% {
-    -webkit-transform: scale(5);
-    transform: scale(5);
+    -webkit-transform: scale(1);
+    transform: scale(1);
     opacity: 0;
   }
   40% {
-    -webkit-transform: scale(5);
-    transform: scale(5);
+    -webkit-transform: scale(1);
+    transform: scale(1);
     opacity: 1;
   }
   60% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    width: 70px;
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    width: 350px;
     opacity: 1;
   }
   90% {
     opacity: 1;
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    width: 350px;
+    opacity: 1;
   }
   100% {
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    width: 350px;
+    opacity: 1;
     opacity: 0;
   }
 }
 
 @keyframes eye-animation-main {
   0% {
-    -webkit-transform: scale(5);
-    transform: scale(5);
+    -webkit-transform: scale(1);
+    transform: scale(1);
     opacity: 0;
   }
   20% {
-    -webkit-transform: scale(5);
-    transform: scale(5);
+    -webkit-transform: scale(1);
+    transform: scale(1);
     opacity: 0;
   }
   40% {
-    -webkit-transform: scale(5);
-    transform: scale(5);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  59% {
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    width: 350px;
     opacity: 1;
   }
   60% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    width: 70px;
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    width: 350px;
+    opacity: 0;
   }
   100% {
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    width: 350px;
     opacity: 0;
   }
 }
@@ -203,6 +217,12 @@
 
 .eyes>img.eye-main {
   opacity: 0;
+  width: 350px;
+  position: absolute;
+  left: 220px;
+  top: 41px;
+  display: block;
+  z-index: 100;
   -webkit-animation: eye-animation-main 6s;
   animation: eye-animation-main 6s;
 }

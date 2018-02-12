@@ -67,7 +67,7 @@ function animation_1() {
 
   $(animationContainer).addClass("eyes");
 
-  for (var i = 0; i < 45; i++) {
+  for (var i = 0; i < 46; i++) {
     var img = document.createElement('img');
     img.src = "images/eye.svg";
     if (i < 9) {
