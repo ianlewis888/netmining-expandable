@@ -51,13 +51,12 @@ $.each(guarantees, function(i) {
 });
 $(letsTalk).addClass("btn");
 $(letsTalk).html('Let\'s Talk&nbsp;<span class="fa fa-chevron-right"></span>');
-$(letsTalk).on("click", function() {
+logo_final.src = "images/nm-logo-white.svg";
+$(logo_final).addClass("logo-white");
+$(adFrame).on("click", function() {
   var destinationLink = window.open("http://netmining.com/lets-talk/");
   destinationLink.opener = null;
 });
-logo_final.src = "images/nm-logo-white.svg";
-$(logo_final).addClass("logo-white");
-
 
 // **
 // Create Animation Functions
@@ -80,7 +79,7 @@ function animation_1() {
     animationContainer.appendChild(img);
   }
 
-  $(textContainer).html('<h1 class="real-eyes">Get real eyes to view your ads for&nbsp;<span class="real-results">real results.</span></h1>');
+  $(textContainer).html('<h1 class="real-eyes">Real Eyes.&nbsp;<span class="real-results">Real results.</span></h1>');
 
   setTimeout(function() {
 

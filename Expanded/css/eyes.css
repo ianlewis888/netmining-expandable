@@ -14,24 +14,22 @@
     transform: scale(1);
     opacity: 1;
   }
-  60% {
+  59% {
     -webkit-transform: scale(.2);
     transform: scale(.2);
     width: 350px;
     opacity: 1;
   }
-  90% {
-    opacity: 1;
+  60% {
     -webkit-transform: scale(.2);
     transform: scale(.2);
     width: 350px;
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     -webkit-transform: scale(.2);
     transform: scale(.2);
     width: 350px;
-    opacity: 1;
     opacity: 0;
   }
 }
@@ -212,12 +210,14 @@
   animation: eye-animation 6s;
   opacity: 0;
   width: 70px;
+  height: 40px;
   margin: 5px;
 }
 
 .eyes>img.eye-main {
   opacity: 0;
   width: 350px;
+  height: 200px;
   position: absolute;
   left: 220px;
   top: 41px;

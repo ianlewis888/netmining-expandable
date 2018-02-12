@@ -13,19 +13,39 @@
       0% { opacity: 0; }
       100% { opacity: 1; }
     }
+    @-webkit-keyframes feature-fadein-1 {
+      0% { opacity: 0; }
+      40% { opacity: 0; }
+      60% { opacity: 1; }
+    }
     @keyframes feature-fadein-1 {
       0% { opacity: 0; }
       40% { opacity: 0; }
       60% { opacity: 1; }
+    }
+    @-webkit-keyframes feature-fadein-2 {
+      0% { opacity: 0; }
+      60% { opacity: 0; }
+      80% { opacity: 1; }
     }
     @keyframes feature-fadein-2 {
       0% { opacity: 0; }
       60% { opacity: 0; }
       80% { opacity: 1; }
     }
+    @-webkit-keyframes feature-fadein-3 {
+      0% { opacity: 0; }
+      80% { opacity: 0; }
+      100% { opacity: 1; }
+    }
     @keyframes feature-fadein-3 {
       0% { opacity: 0; }
       80% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @-webkit-keyframes cta-fadein {
+      0% { opacity: 0; }
+      85.7% { opacity: 0; }
       100% { opacity: 1; }
     }
     @keyframes cta-fadein {
@@ -41,19 +61,24 @@
       background-color: rgb(0,84,123);
       font-family: "Open Sans", sans-serif;
       color: #ffffff;
-      user-select: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
       cursor: pointer;
     }
     .logo {
       position: absolute;
       left: 12px;
-      top: 12px;
+      top: -25px;
       width: 125px;
-      animation: fadein 1s;
+      height: 110px;
+      -webkit-animation: fadein 1s;
+              animation: fadein 1s;
     }
     .features-wrapper {
       position: absolute;
-      top: 47px;
+      top: 42px;
       width: 96%;
       height: 90px;
       margin: 2%;
@@ -65,19 +90,25 @@
       height: 100%;
     }
     .feature > img {
+      -webkit-transform: translateY(7px);
+              transform: translateY(7px);
       width: 40%;
+      height: 40%;
     }
     .feature > p {
       font-size: .75em;
     }
     .features-wrapper > .feature:nth-child(1) {
-      animation: feature-fadein-1 2.5s;
+      -webkit-animation: feature-fadein-1 2.5s;
+              animation: feature-fadein-1 2.5s;
     }
     .features-wrapper > .feature:nth-child(2) {
-      animation: feature-fadein-2 2.5s;
+      -webkit-animation: feature-fadein-2 2.5s;
+              animation: feature-fadein-2 2.5s;
     }
     .features-wrapper > .feature:nth-child(3) {
-      animation: feature-fadein-3 2.5s;
+      -webkit-animation: feature-fadein-3 2.5s;
+              animation: feature-fadein-3 2.5s;
     }
     .guaranteed {
       position: absolute;
@@ -87,7 +118,8 @@
       font-weight: bold;
       font-size: 1.2em;
       line-height: 1.25em;
-      animation: fadein 1s;
+      -webkit-animation: fadein 1s;
+              animation: fadein 1s;
     }
     .guaranteed > span {
       color: rgb(48, 197, 244);
@@ -109,7 +141,8 @@
       font-weight: bold;
       font-size: .9em;
       padding: 5px 10px 5px 10px;
-      animation: cta-fadein 3.5s;
+      -webkit-animation: cta-fadein 3.5s;
+              animation: cta-fadein 3.5s;
     }
     #loading {
       display: none;
@@ -121,6 +154,7 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0,84,123,.8);
+      -webkit-transition: opacity 200ms ease;
       transition: opacity 200ms ease;
     }
     #loading:hover {

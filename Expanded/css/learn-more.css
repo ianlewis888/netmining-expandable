@@ -31,9 +31,11 @@
 .logo-white {
   margin: 0;
   padding: 0;
+  top: -50px;
   left: 140px;
   position: absolute;
   width: 500px;
+  height: 240px;
   -webkit-animation: fadein 1s;
   animation: fadein 1s;
 }
@@ -61,7 +63,7 @@
   transition: transform 300ms ease, -webkit-transform 300ms ease;
 }
 
-.btn:hover>span {
+.ad:hover .btn>span {
   -webkit-transform: translateX(4px);
   transform: translateX(4px);
 }

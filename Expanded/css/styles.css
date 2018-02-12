@@ -13,6 +13,7 @@
   overflow: hidden;
   -webkit-transition: background-color 500ms ease;
   transition: background-color 500ms ease;
+  cursor: pointer;
 }
 
 .ad img {
@@ -22,6 +23,7 @@
 .nm-logo {
   position: absolute;
   width: 250px;
+  height: 61px;
   top: 20px;
   left: 20px;
 }
